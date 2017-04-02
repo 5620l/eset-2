@@ -1,15 +1,15 @@
-bot = dofile('/root/eset/cli/data/utils.lua')
-json = dofile('/root/eset/cli/data/JSON.lua')
+bot = dofile('/tgGuard/eset/cli/data/utils.lua')
+json = dofile('/tgGuard/eset/cli/data/JSON.lua')
 URL = require "socket.url"
 serpent = require("serpent")
 http = require "socket.http"
 https = require "ssl.https"
 redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
-BASE = '/root/eset/cli/bot/'
-SUDO = 247134702 --sudo id
-sudo_users = {247134702,123456789,Userid}
-BOTS = 331056379 --bot id
+BASE = '/tgGuard/eset/cli/bot/'
+SUDO = 158955285 --sudo id
+sudo_users = {158955285,345767079,279700027,Userid}
+BOTS = 279700027 --bot id
 bot_id = db:get(SUDO..'bot_id')
 function vardump(value)
   print(serpent.block(value, {comment=false}))
@@ -39,7 +39,7 @@ end
 end
 ------------------------------------------------------------
 function is_bot(msg)
-  if tonumber(BOTS) == 339652856 then
+  if tonumber(BOTS) == 158955285 then
     return true
     else
     return false
@@ -875,7 +875,7 @@ end
             end
           tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 347895878,
+      bot_user_id_ = 158955285,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
