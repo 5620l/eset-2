@@ -1,15 +1,15 @@
 local URL = require "socket.url"
 local https = require "ssl.https"
 local serpent = require "serpent"
-local json = (loadfile "/root/eset/cli/data/JSON.lua")()
-local token = '347895878:AAG76sUO_f0y41MNPxQRpxEMOUVNnVxRLSM' --token
+local json = (loadfile "/tgGuard/eset/cli/data/JSON.lua")()
+local token = '335663307:AAGbpIlzT2jnR-qiCf5mkWzn-_L4Hdz5Aek' --token
 local url = 'https://api.telegram.org/bot' .. token
 local offset = 0
 local redis = require('redis')
 local redis = redis.connect('127.0.0.1', 6379)
-local SUDO = 247134702
+local SUDO = 158955285
 function is_mod(chat,user)
-sudo = {247134702}
+sudo = {158955285}
   local var = false
   for v,_user in pairs(sudo) do
     if _user == user then
@@ -159,7 +159,7 @@ local function run()
           offset = msg.update_id + 1
           if msg.inline_query then
             local q = msg.inline_query
-						if q.from.id == 331056379 or q.from.id == 247134702 then
+						if q.from.id == 335663307 or q.from.id == 158955285 then
             if q.query:match('%d+') then
               local chat = '-'..q.query:match('%d+')
 							local function is_lock(chat,value)
@@ -189,7 +189,7 @@ local hash = SUDO..'settings:'..chat..':'..value
 						local chat = ('-'..q.data:match('(%d+)') or '')
 						if is_mod(chat,q.from.id) then
              if q.data:match('_') and not (q.data:match('next_page') or q.data:match('left_page')) then
-                Canswer(q.id,">برای مشاهده راهنمای بیشتر این بخش عبارت\n/help\nرا ارسال کنید\n>تیم پشتیبانی:[@MohammadNBGBOT]\n>کانال پشتیبانی:[@EsetGroupSecurity]\n>کانال فروش:[@Nvmee]",true)
+                Canswer(q.id,">برای مشاهده راهنمای بیشتر این بخش عبارت\n/help\nرا ارسال کنید\n>تیم پشتیبانی:[@sajjad_021]\n>کانال پشتیبانی:[@tgMember]\n>کانال فروش:[@Nvmee]",true)
 					elseif q.data:match('lock') then
 							local lock = q.data:match('lock (.*)')
 							TIME_MAX = (redis:get(SUDO..'floodtime'..chat) or 3)
