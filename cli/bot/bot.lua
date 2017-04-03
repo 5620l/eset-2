@@ -39,7 +39,7 @@ end
 end
 ------------------------------------------------------------
 function is_bot(msg)
-  if tonumber(BOTS) == 158955285 then
+  if tonumber(BOTS) == 279700027 then
     return true
     else
     return false
@@ -875,7 +875,7 @@ end
             end
           tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 158955285,
+      bot_user_id_ = 335663307,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
