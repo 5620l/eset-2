@@ -8,7 +8,7 @@ redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
 BASE = '/tgGuard/eset/cli/bot/'
 SUDO = 158955285 --sudo id
-sudo_users = {158955285,345767079,279700027,Userid}
+sudo_users = {158955285,Userid}
 BOTS = 279700027 --bot id
 bot_id = db:get(SUDO..'bot_id')
 function vardump(value)
